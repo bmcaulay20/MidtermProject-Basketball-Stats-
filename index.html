@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Basketball Player Stats</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    </head>
+    <body class ="py-4">
+        <div class = "app mx-auto">
+        </div>
+        <div id="app-box">
+            <h2>Basketball Player Stats</h2>
+
+            <button
+                id="openNewModal"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-add"
+            >
+                Add New Player
+            </button>
+
+            <table class="table table-striped" id="player-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Team</th>
+                        <th>Points</th>
+                        <th>Rebounds</th>
+                        <th>Assists</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="player-body"></tbody>
+            </table>
+        </div>
+        <!-- Add Player Modal -->
+        <div class="modal fade" id="modal-add" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"> Add Player</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Team</label>
+                            <input type="text" class="form-control" id="team" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Points</label>
+                            <input type="number" class="form-control" id="points" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Rebounds</label>
+                            <input type="number" class="form-control" id="rebounds" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Assists</label>
+                            <input type="number" class="form-control" id="assists" />
+                        </div>
+                        <div class="text-danger" id="msg"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="close-add-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button id="add-btn" type="button" class="btn btn-primary">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Edit Player Modal -->
+        <div class="modal fade" id="modal-edit" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit Player</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" id="edit-name" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Team</label>
+                            <input type="text" class="form-control" id="edit-team" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Points</label>
+                            <input type="number" class="form-control" id="edit-points" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Rebounds</label>
+                            <input type="number" class="form-control" id="edit-rebounds" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Assists</label>
+                            <input type="number" class="form-control" id="edit-assists" />
+                        </div>
+                        <div class="text-danger" id="msgEdit"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="close-edit-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="edit-btn" type="button" class="btn btn-warning">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
+    </body>
+</html>
