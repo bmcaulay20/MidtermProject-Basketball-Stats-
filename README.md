@@ -637,6 +637,9 @@ index.html code:
     </body>
 </html>
 
+png used for favicon:
+<img width="935" height="890" alt="Basketball" src="https://github.com/user-attachments/assets/3d1088fb-36cd-44a9-9797-9809ee6d9ff0" />
+
 
 How the app opens:
 <img width="1401" height="332" alt="image" src="https://github.com/user-attachments/assets/f0f22233-4eb2-46f4-b446-09101d5d8abf" />
